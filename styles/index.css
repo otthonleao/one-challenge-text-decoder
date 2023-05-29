@@ -1,0 +1,106 @@
+body {
+	background: #D8DFE8;
+	font-family: 'Inter', sans-serif;
+}
+
+header img {
+	margin: 40px 0px 0px 10px;
+}
+
+.container-input {
+	display: inline-block;
+	margin-left: 240px;
+}
+
+/* ENCRYPTOGRAPH */
+.input-text {
+	background: none;
+	border: none;
+	color: #0A3871;
+	font-size: 32px;
+	margin-top: 10px;
+	outline: none; /* REMOVE O FOCO */
+	overflow: auto; /* BARRA DE ROLAGEM SÓ QUANDO NECESSÁRIO */
+	resize: none; /* REMOVE REDIRECIONADOR */
+	width: 680px;
+}
+
+.input-text::placeholder {
+	color: #0A3871;
+	font-size: 32px;
+}
+
+/* ATTENTION */
+.attention {
+	color: #495057;
+}
+
+.attention img {
+	vertical-align: -10%;
+}
+.attention p {
+	display: inline;
+}
+
+/* BUTTONS */
+.button {
+	display: inline;
+	width: 30%;	
+}
+
+.btn {
+	border: none;
+	border-radius: 15px;
+	box-shadow: 1px 1px 1px #999;
+	cursor: pointer;
+	font-size: 16px;
+	margin-top: 15px;
+	padding: 15px 90px;
+}
+
+.btn-crypt {
+	background: #0A3871;
+	color: white;
+	margin-right: 24px;
+}
+
+.btn-descrypt {
+	background: #bfc6cf;
+	border: solid 0.1em #0A3871;
+	color: #0A3871;
+}
+
+.btn-copy {
+	background: white;
+	border: solid 0.1em #0A3871;
+	color: #0A3871;
+	margin-top: 70px;
+}
+
+.container-output {
+	background: white;
+	border: solid 0.1em #0A3871;
+	border-radius: 20px;
+	display: inline-block;
+	height: 550px;
+	position: absolute;
+	margin-right: 240px;
+	text-align: center;
+	width: 300px;
+	right: 0px;
+}
+
+.output img {
+	padding-top: 30%;
+	max-width: 200px;
+}
+
+.output-p1 {
+	font-weight: bold;
+	font-size: 24px;
+	padding: 10px 10px;
+}
+
+.output-p2 {
+	padding: 10px 10px;
+}

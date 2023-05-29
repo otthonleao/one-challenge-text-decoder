@@ -1,0 +1,22 @@
+footer {
+	background: #0A3871;
+	margin-top: 4%;
+}
+
+footer div img {
+	border-radius: 100%;
+	position: relative;
+	display: inline-block;
+	margin-left: 240px;
+	max-width: 5%;
+	padding: 15px;
+	width: 940px;
+}
+
+footer p {
+	display: inline-block;
+}
+
+.social-medias {
+	/* width: ; */
+}
