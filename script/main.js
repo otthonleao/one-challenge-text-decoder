@@ -3,6 +3,12 @@ const outputP1 = document.getElementById("output-p1");
 const outputP2 = document.getElementById("output-p2");
 const outputImg = document.getElementById("output-img");
 
+// INVALIDANDO A ENTRADA DE ACENTOS E CARACTERES
+inputText.addEventListener("input", function() {
+	this.value = this.value.replace(/[áéíóúçàèìòùãõâêîôûüäëöï!@#$%ˆ&*(_+=_{|\"':;?/.,><})]/gi,"");
+})
+
+// REGRA DA CRIPTOGRAFIA
 let hashCode= [["e", "enter"],
 				["i", "imes"],
 				["a", "ai"],
@@ -25,7 +31,8 @@ function outputStyleAction(action) {
 }
 
 function BtnCopyOutput() {
-	inputText.innerHTML = outputP2.value;
+	inputText.value = "";
+	// inputText.innerHTML = outputP2.value;
 	outputP2.innerHTML = "Digite um texto que você deseja criptografar ou descriptografar";
 	outputStyleAction(false);
 }
@@ -33,18 +40,11 @@ function BtnCopyOutput() {
 function btnEncrypt() {
 	// const encryptedText = encrypt(inputText.value);
 	outputP2.innerHTML = encrypt(inputText.value);
-	inputText.value = "";
+	// inputText.value = "";
 	outputStyleAction(true);
 }
 
-function btnDecrypt() {
-	outputP2.innerHTML = decrypt(inputText.value);
-	inputText.value = "";
-	outputStyleAction(true)
-}
-
 function encrypt(encodeText) {
-
 	encodeText = encodeText.toLowerCase()
 	
 	for(let i = 0; i < hashCode.length; i++) {
@@ -55,10 +55,15 @@ function encrypt(encodeText) {
 	return encodeText
 }
 
-function decrypt(decodeText) {
+function btnDecrypt() {
+	outputP2.innerHTML = decrypt(inputText.value);
+	// inputText.value = "";
+	outputStyleAction(true)
+}
 
+function decrypt(decodeText) {
 	decodeText = decodeText.toLowerCase();
-	
+
 	for(let i = 0; i < hashCode.length; i++) {
 		if(decodeText.includes(hashCode[i][1])) {
 			decodeText = decodeText.replaceAll(hashCode[i][1], hashCode[i][0]);

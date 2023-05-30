@@ -22,3 +22,23 @@ Deve ser possível converter uma palavra para a versão criptografada e também 
 A página deve ter campos para inserção do texto a ser criptografado ou descriptografado, e a pessoa usuária deve poder escolher entre as duas opções.
 
 O resultado deve ser exibido na tela.
+
+## Insights Javascript
+#### Impedir o uso de **acentos** e caracteres especiais no input
+```javascript
+inputText.addEventListener("input", function() {
+	this.value = this.value.replace(/[áéíóúçàèìòùãõâêîôûüäëöï!@#$%ˆ&*(_+=_{|\"':;?/.,><})]/gi,"");
+});
+```
+#### Replace
+O funcionamento do `replace()` nesse desafio está funcionando da seguinte forma:
+
+1. A chave criptográfica é inserida em uma matriz, na qual é possível ver a tabela quando inspesionar o elemento no navegador.
+```javascript
+let hashCode= [["e", "enter"],
+				["i", "imes"],
+				["a", "ai"],
+				["o", "ober"],
+				["u", "ufat"]];
+console.table(hashCode);
+```
