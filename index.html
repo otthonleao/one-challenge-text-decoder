@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./styles/reset.css">
 	<link rel="stylesheet" href="./styles/index.css">
 	<link rel="stylesheet" href="./styles/footer.css">
@@ -12,10 +13,10 @@
 </head>
 <body>
 	<header>
-		<img id="img-one" src="./images/one-logo.png">
+		<!-- <img id="img-one" src="./images/one-logo.png"> -->
 		<img id="img-alura" src="./images/Frame 6.png">
-		<h1>Challenge - Oracle Next Education + Alura</h1>
-		<h2>Decodificador de Texto</h2>
+		<!-- <h1>Challenge - Oracle Next Education + Alura</h1>
+		<h2>Decodificador de Texto</h2> -->
 	</header>
 
 	<main>
@@ -26,41 +27,37 @@
 
 			<div class="attention">
 				<img src="images/bi_exclamation-circle-fill.png" alt="">
-				<p > Apenas letras minúsculas e sem acento.</p>
+				<p> Apenas letras minúsculas.</p>
 			</div>
 			
 			<div class="button">
-				<button class="btn-crypt btn">Criptografar</button>
-				<button class="btn-descrypt btn">Descriptografar</button>
+				<button class="btn-crypt btn" onclick="btnEncrypt()">Criptografar</button>
+				<button class="btn-descrypt btn" onclick="btnDecrypt()">Descriptografar</button>
 			</div>
 		</section>
 
 		<section class="container-output">
 			<div class="output">
-				<img src="images/found.png" alt="Nenhuma mensagem pra descriptografar">
-				<p class="output-p1">Nenhuma mensagem encontrada</p>
-				<p class="output-p2">Digite um texto que você deseja criptografar ou descriptografar</p>
+				<img src="images/found.png" alt="Nenhuma mensagem pra descriptografar" id="output-img">
+				<p class="output-p1" id="output-p1">Nenhuma mensagem encontrada</p>
+				<p class="output-p2" id="output-p2">Digite um texto que você deseja criptografar ou descriptografar</p>
 			</div>
 
 			<div class="button">
-				<button class="btn-copy btn">Copiar</button>
+				<button class="btn-copy btn" onclick="BtnCopyOutput()">Limpar</button>
 			</div>
 		</section>
 	</main>
 
 	<footer>
-		<div>
-			<img src="./images/otthon-leao.png" alt="">
+		<div class="social-media">
 			<p>Desenvolvido por Otthon Leão</p>
+			<a href="https://www.linkedin.com/in/otthonleao/" class="medias" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+			<a href="https://github.com/otthonleao" target="_blank" class="medias"><i class="fa fa-github-square" aria-hidden="true"></i></a>
 		</div>
-		
-		<div class="social-medias">
-			<i class="fa fa-linkedin-square" aria-hidden="true"></i>
-			<i class="fa fa-github-square" aria-hidden="true"></i>
-			<i class="fa fa-youtube-play" aria-hidden="true"></i>
-			<i class="fa fa-youtube-square" aria-hidden="true"></i>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
+
 	</footer>
+
+	<script src="./script/main.js"></script>
 </body>
 </html>

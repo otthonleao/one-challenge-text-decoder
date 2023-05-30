@@ -23,6 +23,7 @@ header img {
 	overflow: auto; /* BARRA DE ROLAGEM SÓ QUANDO NECESSÁRIO */
 	resize: none; /* REMOVE REDIRECIONADOR */
 	width: 680px;
+	text-transform: lowercase;
 }
 
 .input-text::placeholder {
@@ -103,4 +104,24 @@ header img {
 
 .output-p2 {
 	padding: 10px 10px;
+}
+
+.social-media {
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	display: block;
+}
+
+.social-media p {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-size: 0.8rem;
+}
+
+.social-media a {
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
 }
